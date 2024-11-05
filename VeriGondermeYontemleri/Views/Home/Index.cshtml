@@ -1,0 +1,27 @@
+﻿@model HomeIndexVM
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="display:flex;flex-direction:row;justify-content:start;gap:20px;flex-wrap:wrap;">
+    @foreach (var personel in Model.Personels)
+    {
+         <div class="card" style="width: 18rem;border:1px solid black;">
+
+            <img src="~/personelImages/@personel.ImagePath" class="card-img-top" alt="personel-image" style="height:300px;">
+            <div class="card-body">
+                <h5 class="card-title">@ViewBag.cardtitle</h5>
+                <p class="card-text">
+                        <p>Personel Id : @personel.Id</p>
+                        <p>Personel Ad Soyad : @personel.Fullname</p>
+                        <hr />
+                        <p>Çalıştığı Birim : <strong>@Model.Department.DepartmentName</strong></p>
+                </p>
+                <a href="#" class="btn btn-primary">Personel Detayları</a>
+            </div>
+        </div>
+    }
+
+</div>
+

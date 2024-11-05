@@ -1,0 +1,26 @@
+﻿@model insan
+<div>
+    <form asp-controller="home" asp-action="PostData" method="post">
+
+        <input type="text" class="inputStyle" asp-for="Name" />
+
+        <input type="text" class="inputStyle" asp-for="Job" />
+        <h1>name : @Model.Name</h1>
+        <h1>Job : @Model.Job</h1>
+        <button class="btn btn-outline-success" type="submit">Verileri Gönder</button>
+    </form>
+
+
+
+
+</div>
+
+
+<style>
+    .inputStyle {
+        border: 1px solid red;
+        outline: none;
+        height: 40px
+    }
+
+</style>
